@@ -2,16 +2,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Skill from '@/UI/Skill';
-import {
-	CurriculoDownloadButton,
-	DegreeHistoryDownloadButton,
-	CertDownloadButton,
-} from '@/UI/DownloadButton';
+import dynamic from "next/dynamic";
 
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 
 import Steps from '@/UI/Steps';
+
+const DownloadButtons = dynamic(() => import('../UI/DownloadButton'), { ssr: false })
+
 
 
 
@@ -46,7 +45,8 @@ function Card({ marker, title, children }: { marker: string, title: string, chil
 
 
 
-export default function Home() {
+export default async function Home() {
+	
 	return (
 		<div className={styles.page}>
 			<div></div>
@@ -76,11 +76,7 @@ export default function Home() {
 							<a title="WhatsApp" target="_blank" href="https://api.whatsapp.com/send?phone=5562982506984&text=Ol%C3%A1%20Full-Stack%2C%20vi%20seu%20perfil%20em%20higorferreira.dev.br%20e%20gostaria%20de%20conversar%20mais%20sobre%20suas%20compet%C3%AAncias%20profissionais"><FaWhatsapp /></a>
 						</div>
 						<div>
-							<div className="flex flex-wrap _8gap _20mt _20mb">
-								<CurriculoDownloadButton />
-								<DegreeHistoryDownloadButton />
-								<CertDownloadButton />
-							</div>
+							<DownloadButtons />
 						</div>
 						<div className={styles.cards}>
 							<CardItem title="Localização" label="Goiânia - GO" />

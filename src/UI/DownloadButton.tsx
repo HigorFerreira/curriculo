@@ -4,12 +4,12 @@ import { Button, message } from 'antd';
 import { createPortal } from 'react-dom';
 import { GoDownload as DownloadIcon } from "react-icons/go";
 
-export function CurriculoDownloadButton(){
+function CurriculoDownloadButton(){
     const linkRef = useRef<HTMLAnchorElement>(null);
     return <>
-        {createPortal(
+        {typeof window !== 'undefined' && createPortal(
             <a ref={ linkRef } href='/HigorFerreira.pdf' download={'HigorFerreiraResume.pdf'} style={{ display: 'none' }}></a>,
-            document.body
+            window.document.body
         )}
         <Button icon={<DownloadIcon />} onClick={() => {
             linkRef.current?.click();
@@ -19,12 +19,12 @@ export function CurriculoDownloadButton(){
     </>
 }
 
-export function DegreeHistoryDownloadButton(){
+function DegreeHistoryDownloadButton(){
     const linkRef = useRef<HTMLAnchorElement>(null);
     return <>
-        {createPortal(
+        {typeof window !== 'undefined' && createPortal(
             <a ref={ linkRef } href='/HigorFerreiraDegreeHistory.pdf' download={'HigorFerreiraDegreeHistory.pdf'} style={{ display: 'none' }}></a>,
-            document.body
+            window.document.body
         )}
         <Button icon={<DownloadIcon />} onClick={() => {
             linkRef.current?.click();
@@ -34,12 +34,12 @@ export function DegreeHistoryDownloadButton(){
     </>
 }
 
-export function CertDownloadButton(){
+function CertDownloadButton(){
     const linkRef = useRef<HTMLAnchorElement>(null);
     return <>
-        {createPortal(
+        {typeof window !== 'undefined' && createPortal(
             <a ref={ linkRef } href='/HigorFerreiraDegreeHistory.pdf' download={'HigorFerreiraDegreeHistory.pdf'} style={{ display: 'none' }}></a>,
-            document.body
+            window.document.body
         )}
         <Button
             title='Certificado de Conclusão de Curso'
@@ -52,4 +52,12 @@ export function CertDownloadButton(){
             Certificado
         </Button>
     </>
+}
+
+export default function DownloadButtons() {
+    return <div className="flex flex-wrap _8gap _20mt _20mb">
+        <CurriculoDownloadButton />
+        <DegreeHistoryDownloadButton />
+        <CertDownloadButton />
+    </div>;
 }
