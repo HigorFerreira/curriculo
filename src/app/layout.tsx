@@ -84,6 +84,10 @@ export default function RootLayout({
 						text-align: right;
 					}
 
+					.flex-wrap {
+						flex-wrap: wrap;
+					}
+
 					${Array.from({ length: 60 }, (_, i) => i).reduce((a,b) => {
 						return a + `._${b}p{ padding: ${b}px }\n\t`
 							+ `._${b}pt{ padding-top: ${b}px }\n\t`

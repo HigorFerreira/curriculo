@@ -2,8 +2,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Skill from '@/UI/Skill';
+import {
+	CurriculoDownloadButton,
+	DegreeHistoryDownloadButton,
+	CertDownloadButton,
+} from '@/UI/DownloadButton';
 
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+
 
 import Steps from '@/UI/Steps';
 
@@ -67,12 +73,19 @@ export default function Home() {
 						<div className="flex _5gap aln-end">
 							<a title="GitHub" target="_blank" href="https://github.com/HigorFerreira"><FaGithub /></a>
 							<a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/hfas-higor/"><FaLinkedin /></a>
-							<a title="WhatsApp" target="_blank" href="https://wa.me/5562982506984?text=Ol%C3%A1%20Full-Stack%2C%20vi%20seu%20perfil%20em%20eu.higorferreira.dev.br%20e%20gostaria%20de%20conversar%20mais%20sobre%20suas%20compet%C3%AAncias%20profissionais"><FaWhatsapp /></a>
+							<a title="WhatsApp" target="_blank" href="https://api.whatsapp.com/send?phone=5562982506984&text=Ol%C3%A1%20Full-Stack%2C%20vi%20seu%20perfil%20em%20higorferreira.dev.br%20e%20gostaria%20de%20conversar%20mais%20sobre%20suas%20compet%C3%AAncias%20profissionais"><FaWhatsapp /></a>
+						</div>
+						<div>
+							<div className="flex flex-wrap _8gap _20mt _20mb">
+								<CurriculoDownloadButton />
+								<DegreeHistoryDownloadButton />
+								<CertDownloadButton />
+							</div>
 						</div>
 						<div className={styles.cards}>
 							<CardItem title="Localização" label="Goiânia - GO" />
-							<CardItem title="Telefone" label="(62) 08250-6984" />
-							<CardItem title="Web" label="eu.higorferreira.dev.br" />
+							<CardItem title="Telefone" label="(62) 98250-6984" />
+							<CardItem title="Web" label="higorferreira.dev.br" />
 							<CardItem title="Email" label="hfashigor@hotmail.com" />
 						</div>
 					</div>
