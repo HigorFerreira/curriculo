@@ -1,6 +1,17 @@
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
+
+	--bg1: #2b2c2c;
+    --bg2: #2d2e2e;
+    --gray: #a4a5a6;
+    --light: white;
+    --primary: rgb(134 197 216 / 100%);
+
+	--gray-10: rgba(164 165 166 / 10%) !important;
+	--gray-20: rgba(164 165 166 / 20%) !important;
+	--gray-30: rgba(164 165 166 / 30%) !important;
+	--gray-40: rgba(164 165 166 / 40%) !important;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,3 +1,140 @@
 .page {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1500px) auto;
 	font-family: var(--font-lato);
+}
+
+.page > *:nth-child(1){
+	background-color: var(--bg1);
+}
+
+.page > *:nth-child(2){
+	
+}
+
+.page > *:nth-child(3){
+	background-color: var(--bg2);
+}
+
+.presentation {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+	width: 100%;
+	/* height: 100vh; */
+}
+
+.presentation > * {
+	width: 100%;
+	height: 100%;
+	color: var(--gray);
+}
+
+.presentation > *:nth-child(1){
+	background-color: var(--bg1);
+}
+
+.presentation > *:nth-child(2){
+	background-color: var(--bg2);	
+}
+
+.presentation-info {
+	display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto 1fr auto;
+}
+
+.presentation-info > *:nth-child(1){
+	grid-row: 2;
+}
+
+.presentation-info > *:nth-child(2){
+	grid-row: 2;	
+}
+
+.presentation-info > *:nth-child(3){
+	grid-row: 4;
+    grid-column: span 2;
+	
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.intro p {
+	text-align: justify;
+}
+
+.title {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.cards {
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid var(--gray);
+	padding-top: 5px;
+}
+
+.expertise {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 12px;
+	row-gap: 24px;
+}
+
+.skills {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 12px;
+	row-gap: 24px;
+}
+
+.skills p {
+	font-weight: 300;
+	grid-column: span 3;
+}
+
+@media (max-width: 768px){
+	.presentation {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		border-top: 2px solid var(--gray);
+		padding-top: 5px;
+		row-gap: 12px;
+	}
+
+	.expertise {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 8px;
+		row-gap: 24px;
+	}
+
+	.skills {
+		grid-template-columns: 1fr;
+	}
+
+	.skills p {
+		grid-column: span 1;
+	}
+}
+
+@media (max-width: 425px){
+	.expertise {
+		grid-template-columns: 1fr;
+	}
+	.cards {
+		grid-template-columns: 1fr;
+		row-gap: 12px;
+		text-align: center;
+	}
 }
