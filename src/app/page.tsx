@@ -26,6 +26,7 @@ function Card({ marker, title, children }: { marker: string, title: string, chil
 	return <div style={{
 		display: 'grid',
 		gridTemplateColumns: 'auto 1fr',
+		gridTemplateRows: 'auto auto 1fr',
 		columnGap: 14,
 		rowGap: 5,
 	}}>
@@ -79,13 +80,17 @@ export default function Home() {
 				<Pannel>
 					<div className="_42p flex jus-end">
 						<div className="tr">
-							<h3 className="text-primary">Intrudução</h3>
+							<h3 className="text-primary">Introdução</h3>
 							<p>Quem sou eu?</p>
 						</div>
 					</div>
 					<div className={`_42p ${styles.intro}`}>
 						<p>
-						Olá, sou Higor Ferreira. Sou Desenvolvedor Full-Stack com 4 anos de experiência na DataUnique Tecnologia. Minhas principais tecnologias de interesse no desenvolvimento atualmente são NextJs (a framework ReactJs) com preferência para a utilização do TypeScript como linguagem de programação. Testes com Vitest e Testing library (básico).
+						Olá, sou Higor Ferreira.
+						</p>
+
+						<p>
+						Sou Desenvolvedor Full-Stack com 4 anos de experiência. Minhas principais tecnologias de interesse no desenvolvimento atualmente são NextJs (a framework ReactJs) com preferência para a utilização do TypeScript como linguagem de programação. Testes com Vitest e Testing library (básico).
 						Entusiasta das mais diversas tecnologias em NodeJs, como: ExpressJs, Nivo etc.
 						</p>
 
@@ -98,11 +103,7 @@ export default function Home() {
 						</p>
 
 						<p>
-						Sou graduado em Engenharia de Computação pela PUC-Goiás e assuntos de baixo nível como microcontroladores e C++ também me atraem bastante, principalmente no que diz respeito às integrações destes dois mundos (aplicações de alto e baixo nível).
-						</p>
-
-						<p>
-						Atualmente, venho estudando como entusiasta a linguagem Rust e suas tecnologias, principalmente devido a velocidade e segurança das soluções em Rust
+						Atualmente, estudo como entusiasta a linguagem Rust e suas tecnologias, principalmente devido a velocidade e segurança das soluções em Rust.
 						</p>
 					</div>
 				</Pannel>
@@ -129,6 +130,12 @@ export default function Home() {
 								<p>Desenvolvimento de sistemas avançados integrando as diversas tecnologias e protocolos de rede.</p>
 								<p>Integração de linguagens de alto e baixo nível.</p>
 							</>
+						</Card>
+						<Card marker="04" title="Arquitetura em Microserviços">
+							<p>Desenvolvimento de sistemas arquitetados em microserviços para integração contínua.</p>
+						</Card>
+						<Card marker="04" title="Sistemas Web">
+							<p>Sistemas Web de alta interatividade com React.Js.</p>
 						</Card>
 					</div>
 				</Pannel>
