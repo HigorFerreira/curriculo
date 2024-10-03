@@ -131,10 +131,10 @@ export default function Home() {
 								<p>Integração de linguagens de alto e baixo nível.</p>
 							</>
 						</Card>
-						<Card marker="04" title="Arquitetura em Microserviços">
+						<Card marker="05" title="Arquitetura em Microserviços">
 							<p>Desenvolvimento de sistemas arquitetados em microserviços para integração contínua.</p>
 						</Card>
-						<Card marker="04" title="Sistemas Web">
+						<Card marker="06" title="Sistemas Web">
 							<p>Sistemas Web de alta interatividade com React.Js.</p>
 						</Card>
 					</div>
