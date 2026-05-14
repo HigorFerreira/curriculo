@@ -1,6 +1,6 @@
 'use client';
 import { useRef } from 'react';
-import { Button, message } from 'antd';
+import { Button } from 'antd';
 import { createPortal } from 'react-dom';
 import { GoDownload as DownloadIcon } from "react-icons/go";
 
@@ -19,20 +19,20 @@ function CurriculoDownloadButton(){
     </>
 }
 
-function DegreeHistoryDownloadButton(){
-    const linkRef = useRef<HTMLAnchorElement>(null);
-    return <>
-        {typeof window !== 'undefined' && createPortal(
-            <a ref={ linkRef } href='/HigorFerreiraDegreeHistory.pdf' download={'HigorFerreiraDegreeHistory.pdf'} style={{ display: 'none' }}></a>,
-            window.document.body
-        )}
-        <Button icon={<DownloadIcon />} onClick={() => {
-            linkRef.current?.click();
-        }}>
-            Histórico
-        </Button>
-    </>
-}
+// function DegreeHistoryDownloadButton(){
+//     const linkRef = useRef<HTMLAnchorElement>(null);
+//     return <>
+//         {typeof window !== 'undefined' && createPortal(
+//             <a ref={ linkRef } href='/HigorFerreiraDegreeHistory.pdf' download={'HigorFerreiraDegreeHistory.pdf'} style={{ display: 'none' }}></a>,
+//             window.document.body
+//         )}
+//         <Button icon={<DownloadIcon />} onClick={() => {
+//             linkRef.current?.click();
+//         }}>
+//             Histórico
+//         </Button>
+//     </>
+// }
 
 function CertDownloadButton(){
     const linkRef = useRef<HTMLAnchorElement>(null);
