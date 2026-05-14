@@ -82,7 +82,7 @@ export default async function Home() {
 							<CardItem title="Localização" label="Goiânia - GO" />
 							<CardItem title="Telefone" label="(62) 98250-6984" />
 							<CardItem title="Web" label="higorferreira.dev.br" />
-							<CardItem title="Email" label="hfashigor@hotmail.com" />
+							<CardItem title="Email" label="higor@higorferreira.dev.br" />
 						</div>
 					</div>
 				</Pannel>

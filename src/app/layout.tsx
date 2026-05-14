@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt_BR" className="hfas">
-			<body className={`${lato.variable} ${geistSans.variable} ${geistMono.variable}`}>
+			<body className={`${lato.variable} ${geistSans.variable} ${geistMono.variable}`} style={{ backgroundColor: "var(--bg2)" }}>
 				<style>{`
 					.text-primary {
 						color: var(--primary);

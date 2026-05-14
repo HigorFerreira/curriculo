@@ -38,7 +38,7 @@ function CertDownloadButton(){
     const linkRef = useRef<HTMLAnchorElement>(null);
     return <>
         {typeof window !== 'undefined' && createPortal(
-            <a ref={ linkRef } href='/HigorFerreiraDegreeHistory.pdf' download={'HigorFerreiraDegreeHistory.pdf'} style={{ display: 'none' }}></a>,
+            <a ref={ linkRef } href='/HigorFerreiraCertificate.pdf' download={'HigorFerreiraDegree.pdf'} style={{ display: 'none' }}></a>,
             window.document.body
         )}
         <Button
@@ -46,7 +46,8 @@ function CertDownloadButton(){
             variant="outlined"
             icon={<DownloadIcon />}
             onClick={() => {
-                message.info('Aguardando emissão de Certificado de Conclusão de Curso pela PUC-GO', 4.8)
+                linkRef.current?.click();
+                // message.info('Aguardando emissão de Certificado de Conclusão de Curso pela PUC-GO', 4.8)
             }}
         >
             Certificado
@@ -57,7 +58,7 @@ function CertDownloadButton(){
 export default function DownloadButtons() {
     return <div className="flex flex-wrap _8gap _20mt _20mb">
         <CurriculoDownloadButton />
-        <DegreeHistoryDownloadButton />
+        {/* <DegreeHistoryDownloadButton /> */}
         <CertDownloadButton />
     </div>;
 }
