@@ -129,7 +129,9 @@ export default async function Home() {
 							<p>Estilização com FlexBox e Grid para dispositivos responsivos</p>
 						</Card>
 						<Card marker="03" title="JavaScript Avançado">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nam omnis doloribus?</p>
+							<p>
+								Programação funcional e assíncrona para contrução de interfaces interativas complexas.
+							</p>
 						</Card>
 						<Card marker="04" title="Integração de Tecnologias">
 							<>
