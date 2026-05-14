@@ -8,6 +8,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 
 import Steps from '@/UI/Steps';
+import moment from "moment";
 
 const DownloadButtons = dynamic(() => import('../UI/DownloadButton'), { ssr: false })
 
@@ -99,7 +100,12 @@ export default async function Home() {
 						</p>
 
 						<p>
-						Sou Desenvolvedor Full-Stack com 4 anos de experiência. Minhas principais tecnologias de interesse no desenvolvimento atualmente são NextJs (a framework ReactJs) com preferência para a utilização do TypeScript como linguagem de programação. Testes com Vitest e Testing library (básico).
+						Sou Desenvolvedor Full-Stack com {(() => {
+							const now = moment()
+							const start = moment('2018-09-01')
+							const diff = moment.duration(now.diff(start))
+							return diff.years()
+						})()} anos de experiência. Minhas principais tecnologias de interesse no desenvolvimento atualmente são NextJs (a framework ReactJs) com preferência para a utilização do TypeScript como linguagem de programação. Testes com Vitest e Testing library (básico).
 						Entusiasta das mais diversas tecnologias em NodeJs, como: ExpressJs, Nivo etc.
 						</p>
 
