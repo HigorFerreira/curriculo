@@ -96,29 +96,20 @@ export default async function Home() {
 					</div>
 					<div className={`_42p ${styles.intro}`}>
 						<p>
-						Olá, sou Higor Ferreira.
+							Desenvolvedor Full-Stack com {(() => {
+								const now = moment()
+								const start = moment('2018-09-01')
+								const diff = moment.duration(now.diff(start))
+								return diff.years()
+							})()} anos de experiência, atuando em projetos que vão do frontend ao backend, com forte preferência por TypeScript como linguagem principal e Next.js como framework de referência no ecossistema React.
 						</p>
 
 						<p>
-						Sou Desenvolvedor Full-Stack com {(() => {
-							const now = moment()
-							const start = moment('2018-09-01')
-							const diff = moment.duration(now.diff(start))
-							return diff.years()
-						})()} anos de experiência. Minhas principais tecnologias de interesse no desenvolvimento atualmente são NextJs (a framework ReactJs) com preferência para a utilização do TypeScript como linguagem de programação. Testes com Vitest e Testing library (básico).
-						Entusiasta das mais diversas tecnologias em NodeJs, como: ExpressJs, Nivo etc.
+							Adoto arquiteturas de microsserviços como padrão para sistemas escaláveis, orquestrando serviços — bancos de dados, autenticação via Keycloak, proxies reversos com Nginx e aplicações Node.js ou Python — com Docker Compose. Possuo experiência intermediária em Python, com foco em APIs REST usando Flask e FastAPI, além de análise de dados com Pandas.
 						</p>
 
 						<p>
-						Tenho preferência por arquiteturas de software em micro-serviços, especialmente as que podem rapidamente subir seus serviços (um banco de dados; um gerenciamento de usuários como KeyCloak; um Nginx ou o própio ambiente da aplicação em node ou python) com o Docker componse.
-						</p>
-
-						<p>
-						Possuo experência média com a linguagem Python. Especialmente em assuntos como servidores Flask ou FastAPI, além também de manipulação da biblioteca Pandas para análises de dados simples.
-						</p>
-
-						<p>
-						Atualmente, estudo como entusiasta a linguagem Rust e suas tecnologias, principalmente devido a velocidade e segurança das soluções em Rust.
+							No ecossistema WordPress, desenvolvo plugins customizados do zero, integrando backends PHP com frontends modernos em React e gerenciando dependências com Composer. Como entusiasta de Rust, estudo a linguagem com interesse nas garantias de segurança de memória e na performance que ela proporciona — especialmente para sistemas de baixo nível e soluções de alto desempenho.
 						</p>
 					</div>
 				</Pannel>
@@ -166,7 +157,8 @@ export default async function Home() {
 						<p>Linguagens</p>
 						<Skill title="TypeScript" percent={99} />					
 						<Skill title="Python" percent={78} />
-						<Skill title="Rust" percent={30} />
+						<Skill title="PHP" percent={60} />
+						<Skill title="Rust" percent={45} />
 						<Skill title="C++" percent={70} />
 						
 						<p>Tecnologias Node</p>
